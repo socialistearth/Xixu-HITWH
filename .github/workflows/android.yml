@@ -30,6 +30,8 @@ jobs:
         run: node --test tests/*.test.cjs
       - name: Offline Java checks
         run: bash tools/test-java.sh
+      - name: Set up Android SDK tools
+        uses: android-actions/setup-android@v4
       - name: Install Android SDK packages
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - name: Build development APK
