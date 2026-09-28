@@ -21,7 +21,7 @@
 
 ## 安装与开始使用
 
-1. 在 [Releases](https://github.com/socialistearth/Xixu-HITWH/releases) 下载签名 APK。同签名 0.5.x、0.6.x、0.7.x 用户可覆盖安装，升级前不要卸载。
+1. 在 [Releases](https://github.com/socialistearth/Xixu-HITWH/releases) 下载APK。
 2. 打开“用户”，填写自己的学号和统一身份认证密码。
 3. 核对学期、第一教学周周一、每节课起止时间；这些设置决定课表日期和提醒时间。
 4. 点击“同步教务”，需要验证码时按界面提示完成本人验证。
