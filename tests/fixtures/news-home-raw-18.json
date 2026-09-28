@@ -1,0 +1,119 @@
+{
+  "description": "离线回归：以已核实的两个学校原站与VPN路径组合18种原始href；文章编号和标题为模拟数据，不是实际抓取的18篇新闻。",
+  "homeUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/",
+  "nowMs": 1789992000000,
+  "articles": [
+    {
+      "href": "http://www.hitwh.edu.cn/2026/0921/c5449a920001/page.htm",
+      "title": "混合链接离线模拟条目 01",
+      "id": "hitwh-home:a920001",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920001/page.htm"
+    },
+    {
+      "href": "https://www.hitwh.edu.cn/2026/0921/c5449a920002/page.htm",
+      "title": "混合链接离线模拟条目 02",
+      "id": "hitwh-home:a920002",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920002/page.htm"
+    },
+    {
+      "href": "//www.hitwh.edu.cn/2026/0921/c5449a920003/page.htm",
+      "title": "混合链接离线模拟条目 03",
+      "id": "hitwh-home:a920003",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920003/page.htm"
+    },
+    {
+      "href": "/2026/0921/c5449a920004/page.htm",
+      "title": "混合链接离线模拟条目 04",
+      "id": "hitwh-home:a920004",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920004/page.htm"
+    },
+    {
+      "href": "http://www.hitwh.edu.cn:80/2026/0921/c5449a920005/page.htm",
+      "title": "混合链接离线模拟条目 05",
+      "id": "hitwh-home:a920005",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920005/page.htm"
+    },
+    {
+      "href": "https://www.hitwh.edu.cn:443/2026/0921/c5449a920006/page.htm",
+      "title": "混合链接离线模拟条目 06",
+      "id": "hitwh-home:a920006",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920006/page.htm"
+    },
+    {
+      "href": "http://news.hitwh.edu.cn/2026/0921/c5449a920007/page.htm",
+      "title": "混合链接离线模拟条目 07",
+      "id": "hitwh-home:a920007",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920007/page.htm"
+    },
+    {
+      "href": "https://news.hitwh.edu.cn/2026/0921/c5449a920008/page.htm",
+      "title": "混合链接离线模拟条目 08",
+      "id": "hitwh-home:a920008",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920008/page.htm"
+    },
+    {
+      "href": "//news.hitwh.edu.cn/2026/0921/c5449a920009/page.htm",
+      "title": "混合链接离线模拟条目 09",
+      "id": "hitwh-home:a920009",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920009/page.htm"
+    },
+    {
+      "href": "http://news.hitwh.edu.cn:80/2026/0921/c5449a920010/page.htm",
+      "title": "混合链接离线模拟条目 10",
+      "id": "hitwh-home:a920010",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920010/page.htm"
+    },
+    {
+      "href": "https://news.hitwh.edu.cn:443/2026/0921/c5449a920011/page.htm",
+      "title": "混合链接离线模拟条目 11",
+      "id": "hitwh-home:a920011",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920011/page.htm"
+    },
+    {
+      "href": "/2026/0921/c5449a920012/page.htm?vpn-session=fixture#section",
+      "title": "混合链接离线模拟条目 12",
+      "id": "hitwh-home:a920012",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920012/page.htm"
+    },
+    {
+      "href": "https://www.hitwh.edu.cn/2026/0921/c5449a920013/page.psp?vpn-session=fixture#section",
+      "title": "混合链接离线模拟条目 13",
+      "id": "hitwh-home:a920013",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920013/page.htm"
+    },
+    {
+      "href": "https://news.hitwh.edu.cn/2026/0921/c5449a920014/page.psp",
+      "title": "混合链接离线模拟条目 14",
+      "id": "hitwh-home:a920014",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920014/page.htm"
+    },
+    {
+      "href": "//www.hitwh.edu.cn/2026/0921/c5449a920015/page.htm",
+      "title": "混合链接离线模拟条目 15",
+      "id": "hitwh-home:a920015",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920015/page.htm",
+      "resolvedHref": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920015/page.htm"
+    },
+    {
+      "href": "//news.hitwh.edu.cn/2026/0921/c5449a920016/page.htm",
+      "title": "混合链接离线模拟条目 16",
+      "id": "hitwh-home:a920016",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920016/page.htm",
+      "resolvedHref": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920016/page.htm"
+    },
+    {
+      "href": "/2026/0921/c5449a920017/page.htm?vpn-session=fixture#section",
+      "title": "混合链接离线模拟条目 17",
+      "id": "hitwh-home:a920017",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920017/page.htm",
+      "resolvedHref": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421e7e056d22f397c4776468ca88d1b203b/2026/0921/c5449a920017/page.htm"
+    },
+    {
+      "href": "http://news.hitwh.edu.cn/2026/0921/c5449a920018/page.htm",
+      "title": "混合链接离线模拟条目 18",
+      "id": "hitwh-home:a920018",
+      "expectedUrl": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920018/page.htm",
+      "resolvedHref": "https://webvpn2.hitwh.edu.cn/http/77726476706e69737468656265737421fef2568f693861446900c7a99c406d3633/2026/0921/c5449a920018/page.htm"
+    }
+  ]
+}

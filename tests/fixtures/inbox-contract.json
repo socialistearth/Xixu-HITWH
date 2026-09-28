@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "feedId": "b064a11c60a44424bb9c86fafb4d4a4a",
+  "reset": false,
+  "items": [
+    {
+      "id": "2026-09-18",
+      "day": "2026-09-18",
+      "createdAt": 1789740000000,
+      "title": "校园日报 2026-09-18",
+      "context": {
+        "label": "2026级 · 大一 · 秋季学期",
+        "phase": "秋季开学阶段"
+      },
+      "articles": [
+        {
+          "id": "wh:123456",
+          "title": "测试通知 <script>literal</script>",
+          "url": "https://today.hitwh.edu.cn/2026/0918/c1024a123456/page.htm",
+          "published": "2026-09-18",
+          "source": "威海通知",
+          "summary": "这是用于本地联调的合成新闻，不是真实通知。",
+          "campus": "威海",
+          "note": "附件未读取"
+        }
+      ],
+      "warnings": [],
+      "manual": false,
+      "seq": 1
+    }
+  ],
+  "nextCursor": 1,
+  "hasMore": false
+}

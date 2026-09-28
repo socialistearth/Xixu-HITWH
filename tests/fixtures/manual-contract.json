@@ -1,0 +1,45 @@
+{
+  "feed": {
+    "version": 1,
+    "feedId": "65657fae1a32476191a17d7bb433e81d",
+    "reset": false,
+    "items": [
+      {
+        "id": "2026-09-05",
+        "day": "2026-09-05",
+        "createdAt": 1789990418703,
+        "title": "手动精选 2026-09-05 19:00｜1条推荐",
+        "context": {
+          "label": "2026级本科生 · 大一 · 秋季学期",
+          "phase": "秋季开学阶段"
+        },
+        "articles": [
+          {
+            "id": "wh:219821",
+            "title": "数学竞赛报名通知",
+            "url": "https://today.hitwh.edu.cn/2026/0904/c1024a219821/page.htm",
+            "published": "2026-09-04",
+            "source": "威海通知",
+            "summary": "合成新闻用于手动精选联调。",
+            "campus": "威海",
+            "note": "含图片/二维码，未识别图片内容"
+          }
+        ],
+        "warnings": [],
+        "manual": true,
+        "seq": 1
+      }
+    ],
+    "nextCursor": 1,
+    "hasMore": false
+  },
+  "job": {
+    "id": "921a37db50c9465daa4319e80fd80f8c",
+    "status": "succeeded",
+    "createdAt": 1789990418701,
+    "startedAt": 1789990418702,
+    "finishedAt": 1789990418703,
+    "newsSeq": 1,
+    "error": ""
+  }
+}

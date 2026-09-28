@@ -1,0 +1,32 @@
+# Build and editor output
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+
+# Private credentials, signing and runtime data
+.env
+.env.*
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+signing/
+private/
+password.txt
+*.sqlite
+*.sqlite3
+*.db
+
+# Distribution binaries belong in Releases
+*.apk
+*.aab
+*.idsig

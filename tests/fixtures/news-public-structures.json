@@ -1,0 +1,26 @@
+{
+  "description": "DOM structure observed from two public HTTPS article responses on 2026-09-28. Text is synthetic; no full news body is bundled.",
+  "nowMs": 1790596800000,
+  "pages": [
+    {
+      "url": "https://news.hit.edu.cn/2026/0927/c1510a243604/page.htm",
+      "id": "hit-news:a243604",
+      "headingTag": "h1",
+      "headingClass": "title",
+      "headingText": "本部新闻网正文标题回归",
+      "precedingH1": "新闻网",
+      "wrapperClass": "",
+      "bodyClass": "wp_articlecontent"
+    },
+    {
+      "url": "https://news.hitwh.edu.cn/2026/0922/c1040a220695/page.htm",
+      "id": "hitwh-home:a220695",
+      "headingTag": "div",
+      "headingClass": "article_title",
+      "headingText": "威海校区新闻正文标题回归",
+      "precedingH1": "",
+      "wrapperClass": "article_content",
+      "bodyClass": "wp_articlecontent"
+    }
+  ]
+}

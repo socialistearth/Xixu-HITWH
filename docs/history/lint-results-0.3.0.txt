@@ -1,0 +1,61 @@
+app/src/main/java/edu/hitwh/fieldnote/Enhancements.java:72: Warning: Using setJavaScriptEnabled can introduce XSS vulnerabilities into your application, review carefully [SetJavaScriptEnabled]
+   WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(true);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);s.setSafeBrowsingEnabled(true);CookieManager.getInstance().setAcceptThirdPartyCookies(web,false);
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/edu/hitwh/fieldnote/MainActivity.java:32: Warning: Using setJavaScriptEnabled can introduce XSS vulnerabilities into your application, review carefully [SetJavaScriptEnabled]
+        WebSettings ws=ui.getSettings();ws.setJavaScriptEnabled(true);ws.setAllowFileAccess(false);ws.setAllowContentAccess(false);ws.setDomStorageEnabled(false);ws.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/edu/hitwh/fieldnote/PortalActivity.java:31: Warning: Using setJavaScriptEnabled can introduce XSS vulnerabilities into your application, review carefully [SetJavaScriptEnabled]
+        web=new WebView(this);WebSettings s=web.getSettings();s.setJavaScriptEnabled(true);s.setDomStorageEnabled(true);s.setAllowFileAccess(false);s.setAllowContentAccess(false);s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);s.setSafeBrowsingEnabled(true);s.setSupportMultipleWindows(false);s.setJavaScriptCanOpenWindowsAutomatically(false);s.setBuiltInZoomControls(true);s.setDisplayZoomControls(false);s.setLoadWithOverviewMode(true);s.setUseWideViewPort(true);
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetJavaScriptEnabled":
+   Your code should not invoke setJavaScriptEnabled if you are not sure that
+   your app really requires JavaScript support.
+
+   https://goo.gle/SetJavaScriptEnabled
+   https://developer.android.com/training/articles/security-tips
+
+app/src/main/AndroidManifest.xml:12: Warning: The attribute android:dataExtractionRules only applies for Android 12 and higher; since minSdkVersion is API 26 you should also set android:fullBackupContent [DataExtractionRules]
+    <application android:theme="@style/AppTheme" android:label="汐序" android:icon="@drawable/ic_launcher" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:usesCleartextTraffic="false" android:supportsRtl="true">
+                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+app/src/main/java/edu/hitwh/fieldnote/PortalActivity.java:25: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        TextView help=new TextView(this);help.setText("登录 VPN → 打开教务系统 → 进入"+("courses".equals(kind)?"课表":"exams".equals(kind)?"考试":"成绩")+"结果页。选择好学期，再点击读取；不会自动翻页。");help.setTextColor(0xff213e34);help.setPadding(8,4,8,8);if(guided)help.setText("完成学校登录后将自动返回并同步课表、考试与成绩。验证码由学校要求，请在官方页面完成。");root.addView(help);
+                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/edu/hitwh/fieldnote/PortalActivity.java:25: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        TextView help=new TextView(this);help.setText("登录 VPN → 打开教务系统 → 进入"+("courses".equals(kind)?"课表":"exams".equals(kind)?"考试":"成绩")+"结果页。选择好学期，再点击读取；不会自动翻页。");help.setTextColor(0xff213e34);help.setPadding(8,4,8,8);if(guided)help.setText("完成学校登录后将自动返回并同步课表、考试与成绩。验证码由学校要求，请在官方页面完成。");root.addView(help);
+                                                      ~~~~~~~~~~~~~~~~~~~~~~
+app/src/main/java/edu/hitwh/fieldnote/PortalActivity.java:34: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            @Override public boolean shouldOverrideUrlLoading(WebView w,WebResourceRequest r){if(allowed(r.getUrl().toString()))return false;status.setText("该链接不属于允许的学校 HTTPS 域名，已停止跳转。");return true;}
+                                                                                                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 7 warnings

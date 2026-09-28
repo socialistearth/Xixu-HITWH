@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>汐序 · HITWH</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="app">
+<header class="mast"><div class="brand"><span class="brand-mark"><i></i><i></i><i></i></span><span>汐序<span class="brand-sub">HITWH / FIELDNOTE</span></span></div><div class="edition"><span class="status-dot"></span> CAMPUS TERMINAL<br><b>WEIHAI · 01</b></div></header>
+<div id="preview-note" hidden></div>
+<main id="main" tabindex="-1"></main>
+<nav class="bottom" aria-label="主要选项卡"><button data-tab="query" class="active" aria-label="查询"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg><span>查询</span><small>RESEARCH</small></button><button data-tab="news" aria-label="新闻"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v18H4zM8 7h8M8 11h8M8 15h3M14 15h2M8 18h8"/></svg><span>新闻<i id="news-badge" class="news-badge" hidden></i></span><small>DISPATCH</small></button><button data-tab="user" aria-label="用户"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8a4 4 0 1 0 8 0a4 4 0 1 0-8 0M4 21v-3a8 6 0 0 1 16 0v3"/></svg><span>用户</span><small>PERSONAL</small></button></nav>
+</div>
+<div id="overlay" hidden></div><div id="toast" role="status" aria-live="polite"></div>
+<script src="core.js"></script><script src="startup.js"></script><script src="news.js"></script><script src="app.js"></script></body></html>

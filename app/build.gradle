@@ -1,0 +1,14 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'edu.hitwh.fieldnote'
+    compileSdk 35
+    defaultConfig {
+        applicationId providers.gradleProperty('appId').getOrElse('edu.hitwh.fieldnote.news')
+        minSdk 26
+        targetSdk 35
+        versionCode 16
+        versionName '0.7.6'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    buildTypes { release { minifyEnabled false } }
+}

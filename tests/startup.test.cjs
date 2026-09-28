@@ -1,0 +1,15 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const S=require('../app/src/main/assets/startup.js'),A=require('../app/src/main/assets/core.js');
+const snapshot=rows=>({pages:[{tables:[{rows:rows.map(r=>r.map(text=>({text,rowSpan:1,colSpan:1})))}]}]});
+const course=(room='A101')=>snapshot([['课程名称','星期','节次','周次','教室'],['课程甲','1','1-2','1-16',room]]);
+const result=(s=course(),kind='courses')=>({kind,term:'学期甲',sourceKey:'confirmed-page',capturedAt:12345,host:'school.hitwh.edu.cn',snapshot:s});
+const baseline=(s=course(),kind='courses')=>A.parseSnapshot(s,kind).records.map((r,i)=>({...r,id:'old-'+i,term:'学期甲',syncSourceKey:'confirmed-page'}));
+test('随机句库有不同条目且保留出处',()=>{assert.notEqual(S.fallback(()=>0).text,S.fallback(()=>.9).text);assert.ok(S.fallback().from);});
+test('名言失败使用本地文案，外链限定来源',()=>{const q=S.fallback();assert.equal(S.quote({},q),q);assert.equal(S.quote({text:'字'.repeat(91)},q),q);assert.equal(S.quote({text:'一段名言',url:'https://example.org'},q).url,'');});
+test('更新当前来源，保留其他学期和其他来源',()=>{const old=baseline();old.push({...old[0],id:'other-term',term:'学期乙'},{...old[0],id:'other-source',syncSourceKey:'other',name:'课程乙'});const next=S.planUpdate(old,result(course('A202'))).data;assert.equal(next.length,3);assert.ok(next.some(x=>x.id==='other-term'));assert.ok(next.some(x=>x.id==='other-source'));assert.equal(next.find(x=>x.syncSourceKey==='confirmed-page'&&x.term==='学期甲').room,'A202');});
+test('没有变化的记录保留ID',()=>{assert.equal(S.planUpdate(baseline(),result()).data[0].id,'old-0');});
+test('空页面不清除本地数据',()=>{assert.throws(()=>S.planUpdate(baseline(),result(snapshot([]))));});
+test('分页、截断、跨域框架和登录页不覆盖缓存',()=>{for(const flag of ['truncated','possiblePagination','blockedFrames','loginRequired'])assert.throws(()=>S.planUpdate(baseline(),result({...course(),[flag]:true})));});
+test('时间不完整时保留原课表',()=>{assert.throws(()=>S.planUpdate(baseline(),result(snapshot([['课程名称','星期','节次'],['课程甲','1','1-2']]))));});
+test('手动修正与缺少基准需要重新核对',()=>{assert.throws(()=>S.planUpdate(baseline().map(x=>({...x,manualOverride:true})),result()));assert.throws(()=>S.planUpdate([],result()));});
+test('成绩修订替换旧成绩，不重复新增',()=>{const grades=score=>snapshot([['课程名称','成绩','学分','绩点'],['课程甲',score,'3','3.5']]);const updated=S.planUpdate(baseline(grades('85'),'grades'),result(grades('90'),'grades')).data;assert.equal(updated.length,1);assert.equal(updated[0].score,'90');});
